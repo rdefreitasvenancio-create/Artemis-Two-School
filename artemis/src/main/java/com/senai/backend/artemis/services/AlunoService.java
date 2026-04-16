@@ -22,11 +22,11 @@ public class AlunoService {
     return alunoRepository.count();
   }
 
-  public Aluno consultarAluno(Integer id){
+  public Aluno buscarAluno(Integer id){
         return alunoRepository.findById(id).get();
     }
 
-  public List<AlunoRepository> listarAlunos() {
+  public List<Aluno> listarAlunos() {
     return alunoRepository.findAll();
   }
 
@@ -38,7 +38,7 @@ public class AlunoService {
         }
         return false;
     }
-    public Usuario cadastrarAluno(Aluno aluno ){
+    public Aluno cadastrarAluno(Aluno aluno ){
         return alunoRepository.save(aluno);
     }
     public Aluno atualizarAluno(Integer id, Aluno aluno){

@@ -23,29 +23,32 @@ public class Aluno {
         this.email = email;
     }
     public Aluno() {
+
+   
     }
+    
     public int getId() {
         return id;
     }
-    @Id
+
     public void setId(int id) {
         this.id = id;
     }
     public String getNome() {
         return nome;
     }
-    @Column
+
     public void setNome(String nome) {
         this.nome = nome;
     }
-    @Column
+
     public int getDataNascimento() {
         return dataNascimento;
     }
     public void setDataNascimento(int dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
-    @Column
+
     public String getEmail() {
         return email;
     }
