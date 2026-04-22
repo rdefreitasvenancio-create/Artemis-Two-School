@@ -4,22 +4,27 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@Table
+@Table(name = "turma")
 public class Turma {
-    @OneToMany(mappedBy = "turma")
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
 
-    @Column
+    @Column(name = "nome")
     private String nome;
 
-    @Column
+    @OneToMany
+    @JoinColumn(name = "id_turma")
     private List<Aluno> alunos;
 
     public Turma() {
